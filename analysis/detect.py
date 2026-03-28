@@ -257,7 +257,7 @@ def run_all_rules(resources_path: str, logs_path: str) -> list[dict]:
 
 if __name__ == "__main__":
     # Quick smoke-test when run directly
-    findings = run_all_rules("data/resources.csv", "data/access_logs.csv")
+    findings = run_all_rules("data/parsed_resources.csv", "data/parsed_access_logs.csv")
     for f in findings:
         print(f"[{f['severity']}] {f['rule']} — {f['resource_id']}")
     print(f"\nTotal findings: {len(findings)}")
