@@ -1,0 +1,16 @@
+resource_id,resource_type,public_access,port_open,iam_role,encryption
+R101,S3,false,NULL,read-only,true
+R102,S3,true,NULL,read-only,false
+R103,S3,false,NULL,admin,true
+R104,S3,true,NULL,admin,false
+R105,EC2,false,443,read-only,true
+R106,EC2,true,22,admin,false
+R107,EC2,false,80,user,true
+R108,EC2,true,22,read-only,false
+R109,EC2,false,3389,admin,false
+R110,EC2,true,22,admin,false
+R111,IAM,false,NULL,read-only,true
+R112,IAM,false,NULL,admin,true
+R113,IAM,false,NULL,admin,false
+R114,IAM,false,NULL,user,true
+R115,S3,false,NULL,user,false

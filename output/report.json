@@ -1,0 +1,155 @@
+{
+  "generated_at": "2026-03-28T16:05:53.429652+00:00",
+  "summary": {
+    "total": 24,
+    "HIGH": 8,
+    "MEDIUM": 16,
+    "LOW": 0
+  },
+  "findings": [
+    {
+      "severity": "HIGH",
+      "rule": "Public Storage",
+      "resource_id": "R102",
+      "reason": "S3 bucket R102 has public access enabled. Anyone on the internet can read or write its contents."
+    },
+    {
+      "severity": "HIGH",
+      "rule": "Public Storage",
+      "resource_id": "R104",
+      "reason": "S3 bucket R104 has public access enabled. Anyone on the internet can read or write its contents."
+    },
+    {
+      "severity": "HIGH",
+      "rule": "Open SSH Port",
+      "resource_id": "R106",
+      "reason": "EC2 instance R106 has port 22 (SSH) open to the public. This allows brute-force and credential-stuffing attacks directly on the server."
+    },
+    {
+      "severity": "HIGH",
+      "rule": "Open SSH Port",
+      "resource_id": "R108",
+      "reason": "EC2 instance R108 has port 22 (SSH) open to the public. This allows brute-force and credential-stuffing attacks directly on the server."
+    },
+    {
+      "severity": "HIGH",
+      "rule": "Open SSH Port",
+      "resource_id": "R110",
+      "reason": "EC2 instance R110 has port 22 (SSH) open to the public. This allows brute-force and credential-stuffing attacks directly on the server."
+    },
+    {
+      "severity": "HIGH",
+      "rule": "Brute Force Attempt",
+      "resource_id": "user:frank",
+      "reason": "User 'frank' had 5 failed login attempts, with 5+ failures within a 5-minute window. Possible brute-force attack."
+    },
+    {
+      "severity": "HIGH",
+      "rule": "Brute Force Attempt",
+      "resource_id": "user:charlie",
+      "reason": "User 'charlie' had 6 failed login attempts, with 5+ failures within a 5-minute window. Possible brute-force attack."
+    },
+    {
+      "severity": "HIGH",
+      "rule": "Suspicious IP Behaviour",
+      "resource_id": "user:eve",
+      "reason": "User 'eve' logged in from 4 distinct IPs within 30 minutes: 103.21.244.0, 185.220.101.1, 45.33.32.156, 91.108.4.100. Possible credential compromise or account sharing."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "Over-Privileged Role",
+      "resource_id": "R103",
+      "reason": "Resource R103 (S3) is assigned the 'admin' role. Violates least-privilege principle \u2014 use scoped roles instead."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "Over-Privileged Role",
+      "resource_id": "R104",
+      "reason": "Resource R104 (S3) is assigned the 'admin' role. Violates least-privilege principle \u2014 use scoped roles instead."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "Over-Privileged Role",
+      "resource_id": "R106",
+      "reason": "Resource R106 (EC2) is assigned the 'admin' role. Violates least-privilege principle \u2014 use scoped roles instead."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "Over-Privileged Role",
+      "resource_id": "R109",
+      "reason": "Resource R109 (EC2) is assigned the 'admin' role. Violates least-privilege principle \u2014 use scoped roles instead."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "Over-Privileged Role",
+      "resource_id": "R110",
+      "reason": "Resource R110 (EC2) is assigned the 'admin' role. Violates least-privilege principle \u2014 use scoped roles instead."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "Over-Privileged Role",
+      "resource_id": "R112",
+      "reason": "Resource R112 (IAM) is assigned the 'admin' role. Violates least-privilege principle \u2014 use scoped roles instead."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "Over-Privileged Role",
+      "resource_id": "R113",
+      "reason": "Resource R113 (IAM) is assigned the 'admin' role. Violates least-privilege principle \u2014 use scoped roles instead."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "No Encryption",
+      "resource_id": "R102",
+      "reason": "Resource R102 (S3) has encryption disabled. Data at rest is exposed if storage is compromised."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "No Encryption",
+      "resource_id": "R104",
+      "reason": "Resource R104 (S3) has encryption disabled. Data at rest is exposed if storage is compromised."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "No Encryption",
+      "resource_id": "R106",
+      "reason": "Resource R106 (EC2) has encryption disabled. Data at rest is exposed if storage is compromised."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "No Encryption",
+      "resource_id": "R108",
+      "reason": "Resource R108 (EC2) has encryption disabled. Data at rest is exposed if storage is compromised."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "No Encryption",
+      "resource_id": "R109",
+      "reason": "Resource R109 (EC2) has encryption disabled. Data at rest is exposed if storage is compromised."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "No Encryption",
+      "resource_id": "R110",
+      "reason": "Resource R110 (EC2) has encryption disabled. Data at rest is exposed if storage is compromised."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "No Encryption",
+      "resource_id": "R113",
+      "reason": "Resource R113 (IAM) has encryption disabled. Data at rest is exposed if storage is compromised."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "No Encryption",
+      "resource_id": "R115",
+      "reason": "Resource R115 (S3) has encryption disabled. Data at rest is exposed if storage is compromised."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "Admin Overuse",
+      "resource_id": "user:admin",
+      "reason": "Admin account performed 9 actions on 2024-01-15. High admin activity may indicate privilege misuse or a compromised account."
+    }
+  ]
+}
