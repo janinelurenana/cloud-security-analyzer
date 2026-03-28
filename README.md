@@ -19,7 +19,7 @@ cloud-security-project/
 │   ├── parser.py                 # Cleans and normalizes raw JSON → CSV
 │   ├── detect.py                 # Detection rules — returns findings as a list
 │   ├── report.py                 # Formats findings into console output + JSON file
-│   └── run_phase2.py             # Entry point — runs the full pipeline
+│   └── run.py             # Entry point — runs the full pipeline
 │
 ├── output/
 │   └── report.json               # Auto-generated on each run
