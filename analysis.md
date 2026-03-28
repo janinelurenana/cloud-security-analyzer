@@ -21,11 +21,9 @@ The audit ingested raw CloudTrail JSON and AWS Describe API output, normalized i
 
 ---
 
-## Screenshot — Summary Dashboard
+## Summary Dashboard
 
-> 📸 _Insert screenshot of the dashboard summary cards here (total findings, HIGH, MEDIUM, LOW counts)._
->
-> **How to capture:** Run `streamlit run app.py`, open `http://localhost:8501`, and screenshot the top metric card row.
+![dashboard summary cards](./dashboard/summary_cards.png)
 
 ---
 
@@ -99,11 +97,10 @@ Five resources have encryption disabled: `R102`, `R104` (S3 buckets), `R106`, `R
 
 ---
 
-## Screenshot — Findings Breakdown Charts
+## Findings Breakdown Charts
 
-![screenshot of the two bar charts here (severity breakdown on the left, findings by rule on the right)]()
->
-> **How to capture:** Screenshot the chart row in the dashboard — both charts should be visible in a single wide screenshot.
+![screenshot of the two bar charts (severity breakdown on the left, findings by rule on the right)](./dashboard/charts_breakdown.png)
+
 
 ---
 
@@ -139,11 +136,9 @@ An attacker who gains SSH access to `R106` or `R110` does not need to steal IAM 
 
 ---
 
-## Screenshot — Findings Table (HIGH Only)
+## Findings Table - Filtered to high severity
 
-> 📸 _Insert screenshot of the findings table filtered to HIGH severity only._
->
-> **How to capture:** In the dashboard sidebar, deselect MEDIUM and LOW under the Severity filter. Screenshot the resulting findings table.
+![Findings table filtered to HIGH severity only.](./dashboard/findings_high_only.png)
 
 ---
 
