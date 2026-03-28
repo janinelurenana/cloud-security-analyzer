@@ -269,7 +269,7 @@ def main():
     st.markdown(f"""
     <div class="dash-header">
         <div class="dash-title">🛡️ Cloud Security Analyzer</div>
-        <div class="dash-subtitle">report generated {generated_at} &nbsp;·&nbsp; phase 1 — simulated data</div>
+        <div class="dash-subtitle">report generated {generated_at} &nbsp;·&nbsp;</div>
     </div>
     """, unsafe_allow_html=True)
 
