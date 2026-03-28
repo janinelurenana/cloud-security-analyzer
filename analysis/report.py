@@ -183,5 +183,5 @@ def generate_report(
 
 
 if __name__ == "__main__":
-    findings = run_all_rules("data/resources.csv", "data/access_logs.csv")
+    findings = run_all_rules("data/parsed_resources.csv", "data/parsed_access_logs.csv")
     generate_report(findings, json_output_path="output/report.json")
