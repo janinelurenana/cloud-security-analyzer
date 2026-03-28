@@ -82,7 +82,7 @@ raw_resources.json   ──┘                                              │
 ## Project Structure
 
 ```
-cloud-security-project/
+cloud-security-analyzer/
 │
 ├── data/
 │   ├── raw_cloudtrail.json
