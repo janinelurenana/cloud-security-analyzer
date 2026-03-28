@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-03-28T16:05:53.429652+00:00",
+  "generated_at": "2026-03-28T17:08:47.486951+00:00",
   "summary": {
-    "total": 24,
+    "total": 21,
     "HIGH": 8,
-    "MEDIUM": 16,
+    "MEDIUM": 13,
     "LOW": 0
   },
   "findings": [
@@ -58,18 +58,6 @@
     {
       "severity": "MEDIUM",
       "rule": "Over-Privileged Role",
-      "resource_id": "R103",
-      "reason": "Resource R103 (S3) is assigned the 'admin' role. Violates least-privilege principle \u2014 use scoped roles instead."
-    },
-    {
-      "severity": "MEDIUM",
-      "rule": "Over-Privileged Role",
-      "resource_id": "R104",
-      "reason": "Resource R104 (S3) is assigned the 'admin' role. Violates least-privilege principle \u2014 use scoped roles instead."
-    },
-    {
-      "severity": "MEDIUM",
-      "rule": "Over-Privileged Role",
       "resource_id": "R106",
       "reason": "Resource R106 (EC2) is assigned the 'admin' role. Violates least-privilege principle \u2014 use scoped roles instead."
     },
@@ -112,6 +100,12 @@
     {
       "severity": "MEDIUM",
       "rule": "No Encryption",
+      "resource_id": "R115",
+      "reason": "Resource R115 (S3) has encryption disabled. Data at rest is exposed if storage is compromised."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "No Encryption",
       "resource_id": "R106",
       "reason": "Resource R106 (EC2) has encryption disabled. Data at rest is exposed if storage is compromised."
     },
@@ -135,21 +129,9 @@
     },
     {
       "severity": "MEDIUM",
-      "rule": "No Encryption",
-      "resource_id": "R113",
-      "reason": "Resource R113 (IAM) has encryption disabled. Data at rest is exposed if storage is compromised."
-    },
-    {
-      "severity": "MEDIUM",
-      "rule": "No Encryption",
-      "resource_id": "R115",
-      "reason": "Resource R115 (S3) has encryption disabled. Data at rest is exposed if storage is compromised."
-    },
-    {
-      "severity": "MEDIUM",
       "rule": "Admin Overuse",
       "resource_id": "user:admin",
-      "reason": "Admin account performed 9 actions on 2024-01-15. High admin activity may indicate privilege misuse or a compromised account."
+      "reason": "Admin account performed 8 actions on 2024-01-15. High admin activity may indicate privilege misuse or a compromised account."
     }
   ]
 }
