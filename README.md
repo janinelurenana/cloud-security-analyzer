@@ -19,12 +19,18 @@ cloud-security-project/
 │   ├── parser.py                 # Cleans and normalizes raw JSON → CSV
 │   ├── detect.py                 # Detection rules — returns findings as a list
 │   ├── report.py                 # Formats findings into console output + JSON file
-│   └── run.py             # Entry point — runs the full pipeline
+│   └── run.py                    # Entry point — runs the full pipeline
 │
 ├── output/
 │   └── report.json               # Auto-generated on each run
 │
+├── dashboard/
+│   ├── summary_cards.png
+│   ├── charts_breakdown.png
+│   └── findings_high_only.png
+|
 ├── app.py                        # Streamlit dashboard — reads from output/report.json
+├── analysis.md                   # Analysis of the dashboard
 └── README.md
 ```
 
