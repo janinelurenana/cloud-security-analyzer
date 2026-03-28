@@ -1,7 +1,3 @@
-Alright—here’s the rewritten version in your **engineering-style format**: structured, phase-driven, and explicit about design thinking. This is ready to drop into GitHub.
-
----
-
 # Cloud Security Misconfiguration & Activity Analyzer
 
 ## Overview
