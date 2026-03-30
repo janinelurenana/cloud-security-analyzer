@@ -33,6 +33,7 @@ raw_resources.json   ──┘                                              │
 
 * **app.py**
   Read-only dashboard. Visualizes findings from `report.json` using Streamlit.
+  Dashboard: https://cloud-security-analyzer-tctxnssxbmabgj4afsfabw.streamlit.app/ 
 
 ---
 
