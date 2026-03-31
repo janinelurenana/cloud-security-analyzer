@@ -290,7 +290,7 @@ def main():
         st.markdown("---")
         st.markdown(
             "<div style='font-size:0.75rem;color:#6e7681;font-family:JetBrains Mono,monospace;'>"
-            "Cloud Security Analyzer<br>Phase 1 — Local CSV<br><br>"
+            "Cloud Security Analyzer<br>"
             "Run <code>python analysis/report.py</code><br>to refresh report.json</div>",
             unsafe_allow_html=True,
         )
