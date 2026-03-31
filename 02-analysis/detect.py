@@ -137,7 +137,31 @@ def rule_no_encryption(resources: pd.DataFrame) -> list[dict]:
         })
     return findings
 
-
+def rule_monitoring_disabled(resources: pd.DataFrame) -> list[dict]:
+    """
+    Rule 8: EC2 instance monitoring disabled.
+    CloudWatch detailed monitoring being off means reduced visibility into
+    CPU, network, and disk metrics — blind spots during an incident.
+    Severity: LOW — not directly exploitable, but a hygiene issue that
+    hampers detection and incident response.
+    """
+    findings = []
+    flagged = resources[
+        (resources["resource_type"] == "EC2") &
+        (resources["monitoring_enabled"] == False)
+    ]
+    for _, row in flagged.iterrows():
+        findings.append({
+            "severity":    "LOW",
+            "rule":        "Monitoring Disabled",
+            "resource_id": row["resource_id"],
+            "reason":      (
+                f"EC2 instance {row['resource_id']} has CloudWatch detailed monitoring disabled. "
+                "Reduced metric visibility hampers incident detection and response."
+            ),
+        })
+    return findings
+    
 # ---------------------------------------------------------------------------
 # Rules — Access Logs
 # ---------------------------------------------------------------------------
@@ -238,31 +262,6 @@ def rule_admin_overuse(logs: pd.DataFrame) -> list[dict]:
             })
     return findings
 
-
-def rule_monitoring_disabled(resources: pd.DataFrame) -> list[dict]:
-    """
-    Rule 8: EC2 instance monitoring disabled.
-    CloudWatch detailed monitoring being off means reduced visibility into
-    CPU, network, and disk metrics — blind spots during an incident.
-    Severity: LOW — not directly exploitable, but a hygiene issue that
-    hampers detection and incident response.
-    """
-    findings = []
-    flagged = resources[
-        (resources["resource_type"] == "EC2") &
-        (resources["monitoring_enabled"] == False)
-    ]
-    for _, row in flagged.iterrows():
-        findings.append({
-            "severity":    "LOW",
-            "rule":        "Monitoring Disabled",
-            "resource_id": row["resource_id"],
-            "reason":      (
-                f"EC2 instance {row['resource_id']} has CloudWatch detailed monitoring disabled. "
-                "Reduced metric visibility hampers incident detection and response."
-            ),
-        })
-    return findings
 
 
 # ---------------------------------------------------------------------------
