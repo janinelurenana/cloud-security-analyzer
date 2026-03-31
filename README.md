@@ -163,7 +163,7 @@ The engine evaluates two categories of risk:
 * Public EC2 instances with open SSH (port 22)
 * Over-privileged IAM roles (admin-level access)
 * Unencrypted storage resources
-* Unencrypted storage resources
+* EC2 instances with CloudWatch monitoring disabled
 
 ---
 
