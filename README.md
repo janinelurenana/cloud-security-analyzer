@@ -243,7 +243,7 @@ LOW            : 8
 
 | Source | Records |
 | ------ | ------- |
-| CloudTrail log events | 47 |
+| CloudTrail log events | 100 |
 | S3 buckets | 9 |
 | EC2 instances | 10 |
 | IAM roles | 7 |
