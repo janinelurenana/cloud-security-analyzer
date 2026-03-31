@@ -35,6 +35,7 @@ ADMIN_ACTION_THRESHOLD  = 5        # admin actions to trigger Rule 7
 # Loaders
 # ---------------------------------------------------------------------------
 
+# CSVs store everything as strings, so "True" and "False" need to be explicitly mapped back to Python booleans
 def load_resources(path: str) -> pd.DataFrame:
     df = pd.read_csv(path)
     df["public_access"] = df["public_access"].astype(str).str.lower().map(
@@ -51,7 +52,7 @@ def load_resources(path: str) -> pd.DataFrame:
         df["monitoring_enabled"] = None
     return df
 
-
+# parses the timestamp column into real datetime objects
 def load_logs(path: str) -> pd.DataFrame:
     df = pd.read_csv(path)
     df["timestamp"] = pd.to_datetime(df["timestamp"])
