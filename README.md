@@ -85,22 +85,22 @@ raw_resources.json   ──┘                                              │
 ```
 cloud-security-analyzer/
 │
-├── data/
+├── 01-data/
 │   ├── raw_cloudtrail.json
 │   ├── raw_resources.json
 │   ├── parsed_access_logs.csv
 │   └── parsed_resources.csv
 │
-├── analysis/
+├── 02-analysis/
 │   ├── parser.py
 │   ├── detect.py
 │   ├── report.py
 │   └── run.py
 │
-├── output/
+├── 03-output/
 │   └── report.json
 │
-├── dashboard/
+├── 04-dashboard/
 │   ├── summary_cards.png
 │   ├── charts_breakdown.png
 │   └── findings_high_only.png
