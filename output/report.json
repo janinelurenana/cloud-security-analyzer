@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-28T17:08:47.486951+00:00",
+  "generated_at": "2026-03-31T06:09:42.005798+00:00",
   "summary": {
-    "total": 21,
-    "HIGH": 8,
-    "MEDIUM": 13,
-    "LOW": 0
+    "total": 43,
+    "HIGH": 14,
+    "MEDIUM": 21,
+    "LOW": 8
   },
   "findings": [
     {
@@ -18,6 +18,18 @@
       "rule": "Public Storage",
       "resource_id": "R104",
       "reason": "S3 bucket R104 has public access enabled. Anyone on the internet can read or write its contents."
+    },
+    {
+      "severity": "HIGH",
+      "rule": "Public Storage",
+      "resource_id": "R117",
+      "reason": "S3 bucket R117 has public access enabled. Anyone on the internet can read or write its contents."
+    },
+    {
+      "severity": "HIGH",
+      "rule": "Public Storage",
+      "resource_id": "R119",
+      "reason": "S3 bucket R119 has public access enabled. Anyone on the internet can read or write its contents."
     },
     {
       "severity": "HIGH",
@@ -39,6 +51,24 @@
     },
     {
       "severity": "HIGH",
+      "rule": "Open SSH Port",
+      "resource_id": "R121",
+      "reason": "EC2 instance R121 has port 22 (SSH) open to the public. This allows brute-force and credential-stuffing attacks directly on the server."
+    },
+    {
+      "severity": "HIGH",
+      "rule": "Open SSH Port",
+      "resource_id": "R123",
+      "reason": "EC2 instance R123 has port 22 (SSH) open to the public. This allows brute-force and credential-stuffing attacks directly on the server."
+    },
+    {
+      "severity": "HIGH",
+      "rule": "Brute Force Attempt",
+      "resource_id": "user:heidi",
+      "reason": "User 'heidi' had 5 failed login attempts, with 5+ failures within a 5-minute window. Possible brute-force attack."
+    },
+    {
+      "severity": "HIGH",
       "rule": "Brute Force Attempt",
       "resource_id": "user:frank",
       "reason": "User 'frank' had 5 failed login attempts, with 5+ failures within a 5-minute window. Possible brute-force attack."
@@ -54,6 +84,12 @@
       "rule": "Suspicious IP Behaviour",
       "resource_id": "user:eve",
       "reason": "User 'eve' logged in from 4 distinct IPs within 30 minutes: 103.21.244.0, 185.220.101.1, 45.33.32.156, 91.108.4.100. Possible credential compromise or account sharing."
+    },
+    {
+      "severity": "HIGH",
+      "rule": "Suspicious IP Behaviour",
+      "resource_id": "user:ivan",
+      "reason": "User 'ivan' logged in from 3 distinct IPs within 30 minutes: 109.169.23.50, 31.13.64.35, 77.88.55.66. Possible credential compromise or account sharing."
     },
     {
       "severity": "MEDIUM",
@@ -76,6 +112,12 @@
     {
       "severity": "MEDIUM",
       "rule": "Over-Privileged Role",
+      "resource_id": "R123",
+      "reason": "Resource R123 (EC2) is assigned the 'admin' role. Violates least-privilege principle \u2014 use scoped roles instead."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "Over-Privileged Role",
       "resource_id": "R112",
       "reason": "Resource R112 (IAM) is assigned the 'admin' role. Violates least-privilege principle \u2014 use scoped roles instead."
     },
@@ -84,6 +126,18 @@
       "rule": "Over-Privileged Role",
       "resource_id": "R113",
       "reason": "Resource R113 (IAM) is assigned the 'admin' role. Violates least-privilege principle \u2014 use scoped roles instead."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "Over-Privileged Role",
+      "resource_id": "R124",
+      "reason": "Resource R124 (IAM) is assigned the 'admin' role. Violates least-privilege principle \u2014 use scoped roles instead."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "Over-Privileged Role",
+      "resource_id": "R126",
+      "reason": "Resource R126 (IAM) is assigned the 'admin' role. Violates least-privilege principle \u2014 use scoped roles instead."
     },
     {
       "severity": "MEDIUM",
@@ -102,6 +156,24 @@
       "rule": "No Encryption",
       "resource_id": "R115",
       "reason": "Resource R115 (S3) has encryption disabled. Data at rest is exposed if storage is compromised."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "No Encryption",
+      "resource_id": "R117",
+      "reason": "Resource R117 (S3) has encryption disabled. Data at rest is exposed if storage is compromised."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "No Encryption",
+      "resource_id": "R118",
+      "reason": "Resource R118 (S3) has encryption disabled. Data at rest is exposed if storage is compromised."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "No Encryption",
+      "resource_id": "R119",
+      "reason": "Resource R119 (S3) has encryption disabled. Data at rest is exposed if storage is compromised."
     },
     {
       "severity": "MEDIUM",
@@ -129,9 +201,69 @@
     },
     {
       "severity": "MEDIUM",
+      "rule": "No Encryption",
+      "resource_id": "R121",
+      "reason": "Resource R121 (EC2) has encryption disabled. Data at rest is exposed if storage is compromised."
+    },
+    {
+      "severity": "MEDIUM",
+      "rule": "No Encryption",
+      "resource_id": "R123",
+      "reason": "Resource R123 (EC2) has encryption disabled. Data at rest is exposed if storage is compromised."
+    },
+    {
+      "severity": "MEDIUM",
       "rule": "Admin Overuse",
       "resource_id": "user:admin",
-      "reason": "Admin account performed 8 actions on 2024-01-15. High admin activity may indicate privilege misuse or a compromised account."
+      "reason": "Admin account performed 13 actions on 2024-01-15. High admin activity may indicate privilege misuse or a compromised account."
+    },
+    {
+      "severity": "LOW",
+      "rule": "Monitoring Disabled",
+      "resource_id": "R106",
+      "reason": "EC2 instance R106 has CloudWatch detailed monitoring disabled. Reduced metric visibility hampers incident detection and response."
+    },
+    {
+      "severity": "LOW",
+      "rule": "Monitoring Disabled",
+      "resource_id": "R107",
+      "reason": "EC2 instance R107 has CloudWatch detailed monitoring disabled. Reduced metric visibility hampers incident detection and response."
+    },
+    {
+      "severity": "LOW",
+      "rule": "Monitoring Disabled",
+      "resource_id": "R108",
+      "reason": "EC2 instance R108 has CloudWatch detailed monitoring disabled. Reduced metric visibility hampers incident detection and response."
+    },
+    {
+      "severity": "LOW",
+      "rule": "Monitoring Disabled",
+      "resource_id": "R109",
+      "reason": "EC2 instance R109 has CloudWatch detailed monitoring disabled. Reduced metric visibility hampers incident detection and response."
+    },
+    {
+      "severity": "LOW",
+      "rule": "Monitoring Disabled",
+      "resource_id": "R110",
+      "reason": "EC2 instance R110 has CloudWatch detailed monitoring disabled. Reduced metric visibility hampers incident detection and response."
+    },
+    {
+      "severity": "LOW",
+      "rule": "Monitoring Disabled",
+      "resource_id": "R120",
+      "reason": "EC2 instance R120 has CloudWatch detailed monitoring disabled. Reduced metric visibility hampers incident detection and response."
+    },
+    {
+      "severity": "LOW",
+      "rule": "Monitoring Disabled",
+      "resource_id": "R121",
+      "reason": "EC2 instance R121 has CloudWatch detailed monitoring disabled. Reduced metric visibility hampers incident detection and response."
+    },
+    {
+      "severity": "LOW",
+      "rule": "Monitoring Disabled",
+      "resource_id": "R123",
+      "reason": "EC2 instance R123 has CloudWatch detailed monitoring disabled. Reduced metric visibility hampers incident detection and response."
     }
   ]
 }
