@@ -90,7 +90,7 @@ def _extract_resource_id(record: dict) -> str:
 
 
 # ---------------------------------------------------------------------------
-# CloudTrail → access_logs
+# CloudTrail → parsed_access_logs
 # ---------------------------------------------------------------------------
 
 LOGS_FIELDS = ["timestamp", "user", "ip_address", "action", "resource_id", "status"]
@@ -138,7 +138,7 @@ def parse_cloudtrail(path: str) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
-# Resource JSON → resources
+# Resource JSON → parsed_resources
 # ---------------------------------------------------------------------------
 
 RESOURCES_FIELDS = ["resource_id", "resource_type", "public_access", "port_open", "iam_role", "encryption", "monitoring_enabled"]
