@@ -257,6 +257,7 @@ LOW            : 8
 
 * Single-port representation per resource (simplified model)
 * Simulated AWS data (no live integration)
+* * Uses two separate datasets (`raw_cloudtrail.json` and `raw_resources.json`), whereas real SIEM would join the datasets at query time.
 * No anomaly scoring or behavioral baselining
 
 ---
