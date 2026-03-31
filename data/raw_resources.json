@@ -12,13 +12,33 @@
         "RestrictPublicBuckets": true
       },
       "ServerSideEncryptionConfiguration": {
-        "Rules": [{ "ApplyServerSideEncryptionByDefault": { "SSEAlgorithm": "AES256" } }]
+        "Rules": [
+          {
+            "ApplyServerSideEncryptionByDefault": {
+              "SSEAlgorithm": "AES256"
+            }
+          }
+        ]
       },
       "BucketAcl": "private",
-      "Tags": [{ "Key": "env", "Value": "production" }],
+      "Tags": [
+        {
+          "Key": "env",
+          "Value": "production"
+        }
+      ],
       "Versioning": "Enabled",
-      "Logging": { "TargetBucket": "prod-logs", "TargetPrefix": "s3-access/" },
-      "OwnershipControls": { "Rules": [{ "ObjectOwnership": "BucketOwnerEnforced" }] }
+      "Logging": {
+        "TargetBucket": "prod-logs",
+        "TargetPrefix": "s3-access/"
+      },
+      "OwnershipControls": {
+        "Rules": [
+          {
+            "ObjectOwnership": "BucketOwnerEnforced"
+          }
+        ]
+      }
     },
     {
       "BucketId": "R102",
@@ -50,13 +70,31 @@
         "RestrictPublicBuckets": true
       },
       "ServerSideEncryptionConfiguration": {
-        "Rules": [{ "ApplyServerSideEncryptionByDefault": { "SSEAlgorithm": "aws:kms", "KMSMasterKeyID": "arn:aws:kms:ap-southeast-1:123456789012:key/abc" } }]
+        "Rules": [
+          {
+            "ApplyServerSideEncryptionByDefault": {
+              "SSEAlgorithm": "aws:kms",
+              "KMSMasterKeyID": "arn:aws:kms:ap-southeast-1:123456789012:key/abc"
+            }
+          }
+        ]
       },
       "BucketAcl": "private",
-      "Tags": [{ "Key": "env", "Value": "internal" }],
+      "Tags": [
+        {
+          "Key": "env",
+          "Value": "internal"
+        }
+      ],
       "Versioning": "Enabled",
       "Logging": null,
-      "OwnershipControls": { "Rules": [{ "ObjectOwnership": "BucketOwnerEnforced" }] }
+      "OwnershipControls": {
+        "Rules": [
+          {
+            "ObjectOwnership": "BucketOwnerEnforced"
+          }
+        ]
+      }
     },
     {
       "BucketId": "R104",
@@ -89,8 +127,127 @@
       },
       "ServerSideEncryptionConfiguration": null,
       "BucketAcl": "private",
-      "Tags": [{ "Key": "env", "Value": "archive" }],
+      "Tags": [
+        {
+          "Key": "env",
+          "Value": "archive"
+        }
+      ],
       "Versioning": "Enabled",
+      "Logging": null,
+      "OwnershipControls": null
+    },
+    {
+      "BucketId": "R116",
+      "Name": "ml-training-datasets",
+      "CreationDate": "2024-01-02T00:00:00Z",
+      "Region": "ap-southeast-1",
+      "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+      },
+      "ServerSideEncryptionConfiguration": {
+        "Rules": [
+          {
+            "ApplyServerSideEncryptionByDefault": {
+              "SSEAlgorithm": "AES256"
+            }
+          }
+        ]
+      },
+      "BucketAcl": "private",
+      "Tags": [
+        {
+          "Key": "env",
+          "Value": "production"
+        },
+        {
+          "Key": "team",
+          "Value": "ml"
+        }
+      ],
+      "Versioning": "Enabled",
+      "Logging": {
+        "TargetBucket": "prod-logs",
+        "TargetPrefix": "ml-datasets/"
+      },
+      "OwnershipControls": {
+        "Rules": [
+          {
+            "ObjectOwnership": "BucketOwnerEnforced"
+          }
+        ]
+      }
+    },
+    {
+      "BucketId": "R117",
+      "Name": "finance-reports-export",
+      "CreationDate": "2023-12-01T00:00:00Z",
+      "Region": "ap-southeast-1",
+      "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": false,
+        "IgnorePublicAcls": false,
+        "BlockPublicPolicy": false,
+        "RestrictPublicBuckets": false
+      },
+      "ServerSideEncryptionConfiguration": null,
+      "BucketAcl": "public-read",
+      "Tags": null,
+      "Versioning": "Suspended",
+      "Logging": null,
+      "OwnershipControls": null
+    },
+    {
+      "BucketId": "R118",
+      "Name": "customer-pii-backup",
+      "CreationDate": "2023-09-10T00:00:00Z",
+      "Region": "ap-southeast-1",
+      "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": true,
+        "IgnorePublicAcls": true,
+        "BlockPublicPolicy": true,
+        "RestrictPublicBuckets": true
+      },
+      "ServerSideEncryptionConfiguration": null,
+      "BucketAcl": "private",
+      "Tags": [
+        {
+          "Key": "data-classification",
+          "Value": "sensitive"
+        }
+      ],
+      "Versioning": "Enabled",
+      "Logging": null,
+      "OwnershipControls": {
+        "Rules": [
+          {
+            "ObjectOwnership": "BucketOwnerEnforced"
+          }
+        ]
+      }
+    },
+    {
+      "BucketId": "R119",
+      "Name": "temp-build-artifacts",
+      "CreationDate": "2024-01-10T00:00:00Z",
+      "Region": "ap-southeast-1",
+      "PublicAccessBlockConfiguration": {
+        "BlockPublicAcls": false,
+        "IgnorePublicAcls": false,
+        "BlockPublicPolicy": false,
+        "RestrictPublicBuckets": false
+      },
+      "ServerSideEncryptionConfiguration": null,
+      "BucketAcl": "public-read-write",
+      "Tags": [
+        {
+          "Key": "env",
+          "Value": "build"
+        }
+      ],
+      "Versioning": null,
       "Logging": null,
       "OwnershipControls": null
     }
@@ -99,98 +256,485 @@
     {
       "InstanceId": "R105",
       "InstanceType": "t2.micro",
-      "State": { "Code": 16, "Name": "running" },
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
       "PublicIpAddress": null,
       "PrivateIpAddress": "10.0.1.5",
       "SecurityGroups": [
-        { "GroupId": "sg-001", "GroupName": "private-web",
-          "IpPermissions": [{ "IpProtocol": "tcp", "FromPort": 443, "ToPort": 443, "IpRanges": [{ "CidrIp": "10.0.0.0/8" }] }] }
+        {
+          "GroupId": "sg-001",
+          "GroupName": "private-web",
+          "IpPermissions": [
+            {
+              "IpProtocol": "tcp",
+              "FromPort": 443,
+              "ToPort": 443,
+              "IpRanges": [
+                {
+                  "CidrIp": "10.0.0.0/8"
+                }
+              ]
+            }
+          ]
+        }
       ],
-      "IamInstanceProfile": { "Arn": "arn:aws:iam::123456789012:instance-profile/read-only-profile", "Id": "AIPA001" },
-      "BlockDeviceMappings": [{ "DeviceName": "/dev/xvda", "Ebs": { "Encrypted": true, "VolumeId": "vol-001" } }],
-      "Tags": [{ "Key": "Name", "Value": "prod-web-01" }],
+      "IamInstanceProfile": {
+        "Arn": "arn:aws:iam::123456789012:instance-profile/read-only-profile",
+        "Id": "AIPA001"
+      },
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/xvda",
+          "Ebs": {
+            "Encrypted": true,
+            "VolumeId": "vol-001"
+          }
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "prod-web-01"
+        }
+      ],
       "LaunchTime": "2024-01-01T00:00:00Z",
-      "Monitoring": { "State": "enabled" }
+      "Monitoring": {
+        "State": "enabled"
+      }
     },
     {
       "InstanceId": "R106",
       "InstanceType": "t2.micro",
-      "State": { "Code": 16, "Name": "running" },
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
       "PublicIpAddress": "54.123.45.67",
       "PrivateIpAddress": "10.0.2.10",
       "SecurityGroups": [
-        { "GroupId": "sg-002", "GroupName": "open-ssh",
-          "IpPermissions": [{ "IpProtocol": "tcp", "FromPort": 22, "ToPort": 22, "IpRanges": [{ "CidrIp": "0.0.0.0/0" }] }] }
+        {
+          "GroupId": "sg-002",
+          "GroupName": "open-ssh",
+          "IpPermissions": [
+            {
+              "IpProtocol": "tcp",
+              "FromPort": 22,
+              "ToPort": 22,
+              "IpRanges": [
+                {
+                  "CidrIp": "0.0.0.0/0"
+                }
+              ]
+            }
+          ]
+        }
       ],
-      "IamInstanceProfile": { "Arn": "arn:aws:iam::123456789012:instance-profile/admin-profile", "Id": "AIPA002" },
-      "BlockDeviceMappings": [{ "DeviceName": "/dev/xvda", "Ebs": { "Encrypted": false, "VolumeId": "vol-002" } }],
+      "IamInstanceProfile": {
+        "Arn": "arn:aws:iam::123456789012:instance-profile/admin-profile",
+        "Id": "AIPA002"
+      },
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/xvda",
+          "Ebs": {
+            "Encrypted": false,
+            "VolumeId": "vol-002"
+          }
+        }
+      ],
       "Tags": null,
       "LaunchTime": "2024-01-10T00:00:00Z",
-      "Monitoring": { "State": "disabled" }
+      "Monitoring": {
+        "State": "disabled"
+      }
     },
     {
       "InstanceId": "R107",
       "InstanceType": "t2.small",
-      "State": { "Code": 16, "Name": "running" },
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
       "PublicIpAddress": null,
       "PrivateIpAddress": "10.0.3.20",
       "SecurityGroups": [
-        { "GroupId": "sg-003", "GroupName": "internal-http",
-          "IpPermissions": [{ "IpProtocol": "tcp", "FromPort": 80, "ToPort": 80, "IpRanges": [{ "CidrIp": "10.0.0.0/8" }] }] }
+        {
+          "GroupId": "sg-003",
+          "GroupName": "internal-http",
+          "IpPermissions": [
+            {
+              "IpProtocol": "tcp",
+              "FromPort": 80,
+              "ToPort": 80,
+              "IpRanges": [
+                {
+                  "CidrIp": "10.0.0.0/8"
+                }
+              ]
+            }
+          ]
+        }
       ],
-      "IamInstanceProfile": { "Arn": "arn:aws:iam::123456789012:instance-profile/user-profile", "Id": "AIPA003" },
-      "BlockDeviceMappings": [{ "DeviceName": "/dev/xvda", "Ebs": { "Encrypted": true, "VolumeId": "vol-003" } }],
-      "Tags": [{ "Key": "Name", "Value": "internal-api" }],
+      "IamInstanceProfile": {
+        "Arn": "arn:aws:iam::123456789012:instance-profile/user-profile",
+        "Id": "AIPA003"
+      },
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/xvda",
+          "Ebs": {
+            "Encrypted": true,
+            "VolumeId": "vol-003"
+          }
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "internal-api"
+        }
+      ],
       "LaunchTime": "2024-01-05T00:00:00Z",
       "Monitoring": null
     },
     {
       "InstanceId": "R108",
       "InstanceType": "t2.micro",
-      "State": { "Code": 16, "Name": "running" },
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
       "PublicIpAddress": "54.200.10.33",
       "PrivateIpAddress": "10.0.4.5",
       "SecurityGroups": [
-        { "GroupId": "sg-004", "GroupName": "allow-ssh-public",
-          "IpPermissions": [{ "IpProtocol": "tcp", "FromPort": 22, "ToPort": 22, "IpRanges": [{ "CidrIp": "0.0.0.0/0" }] }] }
+        {
+          "GroupId": "sg-004",
+          "GroupName": "allow-ssh-public",
+          "IpPermissions": [
+            {
+              "IpProtocol": "tcp",
+              "FromPort": 22,
+              "ToPort": 22,
+              "IpRanges": [
+                {
+                  "CidrIp": "0.0.0.0/0"
+                }
+              ]
+            }
+          ]
+        }
       ],
       "IamInstanceProfile": null,
-      "BlockDeviceMappings": [{ "DeviceName": "/dev/xvda", "Ebs": { "Encrypted": false, "VolumeId": "vol-004" } }],
-      "Tags": [{ "Key": "Name", "Value": "dev-test" }],
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/xvda",
+          "Ebs": {
+            "Encrypted": false,
+            "VolumeId": "vol-004"
+          }
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "dev-test"
+        }
+      ],
       "LaunchTime": "2024-01-12T00:00:00Z",
-      "Monitoring": { "State": "disabled" }
+      "Monitoring": {
+        "State": "disabled"
+      }
     },
     {
       "InstanceId": "R109",
       "InstanceType": "t2.medium",
-      "State": { "Code": 16, "Name": "running" },
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
       "PublicIpAddress": null,
       "PrivateIpAddress": "10.0.5.15",
       "SecurityGroups": [
-        { "GroupId": "sg-005", "GroupName": "rdp-internal",
-          "IpPermissions": [{ "IpProtocol": "tcp", "FromPort": 3389, "ToPort": 3389, "IpRanges": [{ "CidrIp": "10.0.0.0/8" }] }] }
+        {
+          "GroupId": "sg-005",
+          "GroupName": "rdp-internal",
+          "IpPermissions": [
+            {
+              "IpProtocol": "tcp",
+              "FromPort": 3389,
+              "ToPort": 3389,
+              "IpRanges": [
+                {
+                  "CidrIp": "10.0.0.0/8"
+                }
+              ]
+            }
+          ]
+        }
       ],
-      "IamInstanceProfile": { "Arn": "arn:aws:iam::123456789012:instance-profile/admin-profile", "Id": "AIPA004" },
-      "BlockDeviceMappings": [{ "DeviceName": "/dev/xvda", "Ebs": { "Encrypted": false, "VolumeId": "vol-005" } }],
-      "Tags": [{ "Key": "Name", "Value": "windows-dev" }],
+      "IamInstanceProfile": {
+        "Arn": "arn:aws:iam::123456789012:instance-profile/admin-profile",
+        "Id": "AIPA004"
+      },
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/xvda",
+          "Ebs": {
+            "Encrypted": false,
+            "VolumeId": "vol-005"
+          }
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "windows-dev"
+        }
+      ],
       "LaunchTime": "2024-01-08T00:00:00Z",
       "Monitoring": null
     },
     {
       "InstanceId": "R110",
       "InstanceType": "t2.micro",
-      "State": { "Code": 16, "Name": "running" },
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
       "PublicIpAddress": "18.136.200.5",
       "PrivateIpAddress": "10.0.6.22",
       "SecurityGroups": [
-        { "GroupId": "sg-006", "GroupName": "wide-open",
-          "IpPermissions": [{ "IpProtocol": "tcp", "FromPort": 22, "ToPort": 22, "IpRanges": [{ "CidrIp": "0.0.0.0/0" }] }] }
+        {
+          "GroupId": "sg-006",
+          "GroupName": "wide-open",
+          "IpPermissions": [
+            {
+              "IpProtocol": "tcp",
+              "FromPort": 22,
+              "ToPort": 22,
+              "IpRanges": [
+                {
+                  "CidrIp": "0.0.0.0/0"
+                }
+              ]
+            }
+          ]
+        }
       ],
-      "IamInstanceProfile": { "Arn": "arn:aws:iam::123456789012:instance-profile/admin-profile", "Id": "AIPA005" },
+      "IamInstanceProfile": {
+        "Arn": "arn:aws:iam::123456789012:instance-profile/admin-profile",
+        "Id": "AIPA005"
+      },
       "BlockDeviceMappings": null,
       "Tags": null,
       "LaunchTime": "2024-01-14T00:00:00Z",
-      "Monitoring": { "State": "disabled" }
+      "Monitoring": {
+        "State": "disabled"
+      }
+    },
+    {
+      "InstanceId": "R120",
+      "InstanceType": "t3.medium",
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
+      "PublicIpAddress": null,
+      "PrivateIpAddress": "10.0.7.10",
+      "SecurityGroups": [
+        {
+          "GroupId": "sg-007",
+          "GroupName": "private-app",
+          "IpPermissions": [
+            {
+              "IpProtocol": "tcp",
+              "FromPort": 8080,
+              "ToPort": 8080,
+              "IpRanges": [
+                {
+                  "CidrIp": "10.0.0.0/8"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "IamInstanceProfile": {
+        "Arn": "arn:aws:iam::123456789012:instance-profile/user-profile",
+        "Id": "AIPA006"
+      },
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/xvda",
+          "Ebs": {
+            "Encrypted": true,
+            "VolumeId": "vol-006"
+          }
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "internal-worker"
+        }
+      ],
+      "LaunchTime": "2024-01-11T00:00:00Z",
+      "Monitoring": {
+        "State": "disabled"
+      }
+    },
+    {
+      "InstanceId": "R121",
+      "InstanceType": "t2.micro",
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
+      "PublicIpAddress": "54.251.33.12",
+      "PrivateIpAddress": "10.0.8.5",
+      "SecurityGroups": [
+        {
+          "GroupId": "sg-008",
+          "GroupName": "open-all-ssh",
+          "IpPermissions": [
+            {
+              "IpProtocol": "tcp",
+              "FromPort": 22,
+              "ToPort": 22,
+              "IpRanges": [
+                {
+                  "CidrIp": "0.0.0.0/0"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "IamInstanceProfile": {
+        "Arn": "arn:aws:iam::123456789012:instance-profile/user-profile",
+        "Id": "AIPA007"
+      },
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/xvda",
+          "Ebs": {
+            "Encrypted": false,
+            "VolumeId": "vol-007"
+          }
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "legacy-api"
+        }
+      ],
+      "LaunchTime": "2023-11-20T00:00:00Z",
+      "Monitoring": {
+        "State": "disabled"
+      }
+    },
+    {
+      "InstanceId": "R122",
+      "InstanceType": "t3.large",
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
+      "PublicIpAddress": null,
+      "PrivateIpAddress": "10.0.9.15",
+      "SecurityGroups": [
+        {
+          "GroupId": "sg-009",
+          "GroupName": "db-private",
+          "IpPermissions": [
+            {
+              "IpProtocol": "tcp",
+              "FromPort": 5432,
+              "ToPort": 5432,
+              "IpRanges": [
+                {
+                  "CidrIp": "10.0.0.0/8"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "IamInstanceProfile": {
+        "Arn": "arn:aws:iam::123456789012:instance-profile/read-only-profile",
+        "Id": "AIPA008"
+      },
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/xvda",
+          "Ebs": {
+            "Encrypted": true,
+            "VolumeId": "vol-008"
+          }
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "db-primary"
+        }
+      ],
+      "LaunchTime": "2023-10-01T00:00:00Z",
+      "Monitoring": {
+        "State": "enabled"
+      }
+    },
+    {
+      "InstanceId": "R123",
+      "InstanceType": "t2.small",
+      "State": {
+        "Code": 16,
+        "Name": "running"
+      },
+      "PublicIpAddress": "13.229.44.88",
+      "PrivateIpAddress": "10.0.10.22",
+      "SecurityGroups": [
+        {
+          "GroupId": "sg-010",
+          "GroupName": "bastion-ssh",
+          "IpPermissions": [
+            {
+              "IpProtocol": "tcp",
+              "FromPort": 22,
+              "ToPort": 22,
+              "IpRanges": [
+                {
+                  "CidrIp": "0.0.0.0/0"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "IamInstanceProfile": {
+        "Arn": "arn:aws:iam::123456789012:instance-profile/admin-profile",
+        "Id": "AIPA009"
+      },
+      "BlockDeviceMappings": [
+        {
+          "DeviceName": "/dev/xvda",
+          "Ebs": {
+            "Encrypted": false,
+            "VolumeId": "vol-009"
+          }
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "bastion-host"
+        }
+      ],
+      "LaunchTime": "2024-01-13T00:00:00Z",
+      "Monitoring": null
     }
   ],
   "IAMRoles": [
@@ -199,9 +743,19 @@
       "RoleName": "read-only-role",
       "Arn": "arn:aws:iam::123456789012:role/read-only-role",
       "CreateDate": "2023-01-01T00:00:00Z",
-      "AttachedPolicies": [{ "PolicyName": "ReadOnlyAccess", "PolicyArn": "arn:aws:iam::aws:policy/ReadOnlyAccess" }],
+      "AttachedPolicies": [
+        {
+          "PolicyName": "ReadOnlyAccess",
+          "PolicyArn": "arn:aws:iam::aws:policy/ReadOnlyAccess"
+        }
+      ],
       "InlinePolicies": [],
-      "Tags": [{ "Key": "team", "Value": "engineering" }],
+      "Tags": [
+        {
+          "Key": "team",
+          "Value": "engineering"
+        }
+      ],
       "MaxSessionDuration": 3600,
       "Description": "Read-only access for auditors"
     },
@@ -210,7 +764,12 @@
       "RoleName": "admin-role",
       "Arn": "arn:aws:iam::123456789012:role/admin-role",
       "CreateDate": "2023-01-01T00:00:00Z",
-      "AttachedPolicies": [{ "PolicyName": "AdministratorAccess", "PolicyArn": "arn:aws:iam::aws:policy/AdministratorAccess" }],
+      "AttachedPolicies": [
+        {
+          "PolicyName": "AdministratorAccess",
+          "PolicyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+        }
+      ],
       "InlinePolicies": [],
       "Tags": null,
       "MaxSessionDuration": 43200,
@@ -222,11 +781,22 @@
       "Arn": "arn:aws:iam::123456789012:role/ops-admin",
       "CreateDate": "2023-06-15T00:00:00Z",
       "AttachedPolicies": [
-        { "PolicyName": "AdministratorAccess", "PolicyArn": "arn:aws:iam::aws:policy/AdministratorAccess" },
-        { "PolicyName": "AmazonS3FullAccess", "PolicyArn": "arn:aws:iam::aws:policy/AmazonS3FullAccess" }
+        {
+          "PolicyName": "AdministratorAccess",
+          "PolicyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+        },
+        {
+          "PolicyName": "AmazonS3FullAccess",
+          "PolicyArn": "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+        }
       ],
       "InlinePolicies": null,
-      "Tags": [{ "Key": "team", "Value": "ops" }],
+      "Tags": [
+        {
+          "Key": "team",
+          "Value": "ops"
+        }
+      ],
       "MaxSessionDuration": 3600,
       "Description": "Ops team admin role"
     },
@@ -236,13 +806,86 @@
       "Arn": "arn:aws:iam::123456789012:role/developer-role",
       "CreateDate": "2023-03-01T00:00:00Z",
       "AttachedPolicies": [
-        { "PolicyName": "AmazonS3ReadOnlyAccess", "PolicyArn": "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess" },
-        { "PolicyName": "CloudWatchReadOnlyAccess", "PolicyArn": "arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess" }
+        {
+          "PolicyName": "AmazonS3ReadOnlyAccess",
+          "PolicyArn": "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
+        },
+        {
+          "PolicyName": "CloudWatchReadOnlyAccess",
+          "PolicyArn": "arn:aws:iam::aws:policy/CloudWatchReadOnlyAccess"
+        }
       ],
       "InlinePolicies": [],
-      "Tags": [{ "Key": "team", "Value": "dev" }],
+      "Tags": [
+        {
+          "Key": "team",
+          "Value": "dev"
+        }
+      ],
       "MaxSessionDuration": 3600,
       "Description": "Developer scoped access"
+    },
+    {
+      "RoleId": "R124",
+      "RoleName": "ci-cd-deployer",
+      "Arn": "arn:aws:iam::123456789012:role/ci-cd-deployer",
+      "CreateDate": "2024-01-01T00:00:00Z",
+      "AttachedPolicies": [
+        {
+          "PolicyName": "AdministratorAccess",
+          "PolicyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+        }
+      ],
+      "InlinePolicies": [],
+      "Tags": [
+        {
+          "Key": "team",
+          "Value": "devops"
+        }
+      ],
+      "MaxSessionDuration": 3600,
+      "Description": "CI/CD pipeline deployment role"
+    },
+    {
+      "RoleId": "R125",
+      "RoleName": "lambda-execution-role",
+      "Arn": "arn:aws:iam::123456789012:role/lambda-execution-role",
+      "CreateDate": "2023-08-01T00:00:00Z",
+      "AttachedPolicies": [
+        {
+          "PolicyName": "AWSLambdaBasicExecutionRole",
+          "PolicyArn": "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+        },
+        {
+          "PolicyName": "AmazonS3ReadOnlyAccess",
+          "PolicyArn": "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
+        }
+      ],
+      "InlinePolicies": [],
+      "Tags": [
+        {
+          "Key": "service",
+          "Value": "lambda"
+        }
+      ],
+      "MaxSessionDuration": 3600,
+      "Description": "Lambda function execution role"
+    },
+    {
+      "RoleId": "R126",
+      "RoleName": "data-pipeline-role",
+      "Arn": "arn:aws:iam::123456789012:role/data-pipeline-role",
+      "CreateDate": "2023-11-15T00:00:00Z",
+      "AttachedPolicies": [
+        {
+          "PolicyName": "AdministratorAccess",
+          "PolicyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+        }
+      ],
+      "InlinePolicies": null,
+      "Tags": null,
+      "MaxSessionDuration": 7200,
+      "Description": null
     }
   ]
 }

@@ -15,12 +15,21 @@
       "awsRegion": "ap-southeast-1",
       "sourceIPAddress": "192.168.1.10",
       "userAgent": "aws-sdk-python/1.26.0",
-      "requestParameters": { "bucketName": "R101", "key": "config.json" },
+      "requestParameters": {
+        "bucketName": "R101",
+        "key": "config.json"
+      },
       "responseElements": null,
       "requestID": "EXAMPLE123REQUEST001",
       "eventID": "EXAMPLE123EVENT001",
       "readOnly": true,
-      "resources": [{ "ARN": "arn:aws:s3:::R101", "accountId": "123456789012", "type": "AWS::S3::Object" }],
+      "resources": [
+        {
+          "ARN": "arn:aws:s3:::R101",
+          "accountId": "123456789012",
+          "type": "AWS::S3::Object"
+        }
+      ],
       "eventType": "AwsApiCall",
       "managementEvent": false,
       "recipientAccountId": "123456789012",
@@ -42,12 +51,20 @@
       "awsRegion": "ap-southeast-1",
       "sourceIPAddress": "10.0.0.5",
       "userAgent": "S3Console/0.4",
-      "requestParameters": { "bucketName": "R101" },
+      "requestParameters": {
+        "bucketName": "R101"
+      },
       "responseElements": null,
       "requestID": "EXAMPLE123REQUEST002",
       "eventID": "EXAMPLE123EVENT002",
       "readOnly": true,
-      "resources": [{ "ARN": "arn:aws:s3:::R101", "accountId": "123456789012", "type": "AWS::S3::Bucket" }],
+      "resources": [
+        {
+          "ARN": "arn:aws:s3:::R101",
+          "accountId": "123456789012",
+          "type": "AWS::S3::Bucket"
+        }
+      ],
       "eventType": "AwsApiCall",
       "managementEvent": false,
       "recipientAccountId": "123456789012",
@@ -70,7 +87,9 @@
       "sourceIPAddress": "203.0.113.5",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Success" },
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
       "requestID": "EXAMPLE123REQUEST003",
       "eventID": "EXAMPLE123EVENT003",
       "readOnly": false,
@@ -100,7 +119,10 @@
       "awsRegion": "us-east-1",
       "sourceIPAddress": "203.0.113.5",
       "userAgent": "AWS Internal",
-      "requestParameters": { "roleName": "R112", "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess" },
+      "requestParameters": {
+        "roleName": "R112",
+        "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+      },
       "responseElements": null,
       "requestID": "EXAMPLE123REQUEST004",
       "eventID": "EXAMPLE123EVENT004",
@@ -126,8 +148,15 @@
       "awsRegion": "us-east-1",
       "sourceIPAddress": "203.0.113.5",
       "userAgent": "AWS Internal",
-      "requestParameters": { "userName": "newuser" },
-      "responseElements": { "user": { "userName": "newuser", "userId": "AIDANEWUSER001" } },
+      "requestParameters": {
+        "userName": "newuser"
+      },
+      "responseElements": {
+        "user": {
+          "userName": "newuser",
+          "userId": "AIDANEWUSER001"
+        }
+      },
       "requestID": "EXAMPLE123REQUEST005",
       "eventID": "EXAMPLE123EVENT005",
       "readOnly": false,
@@ -152,7 +181,9 @@
       "awsRegion": "ap-southeast-1",
       "sourceIPAddress": "203.0.113.5",
       "userAgent": "AWS Internal",
-      "requestParameters": { "bucketName": "R103" },
+      "requestParameters": {
+        "bucketName": "R103"
+      },
       "responseElements": null,
       "requestID": "EXAMPLE123REQUEST006",
       "eventID": "EXAMPLE123EVENT006",
@@ -178,8 +209,14 @@
       "awsRegion": "ap-southeast-1",
       "sourceIPAddress": "203.0.113.5",
       "userAgent": "aws-cli/2.9.0",
-      "requestParameters": { "instanceId": "R106", "attribute": "groupSet" },
-      "responseElements": { "requestId": "EXAMPLE123REQUEST007", "_return": true },
+      "requestParameters": {
+        "instanceId": "R106",
+        "attribute": "groupSet"
+      },
+      "responseElements": {
+        "requestId": "EXAMPLE123REQUEST007",
+        "_return": true
+      },
       "requestID": "EXAMPLE123REQUEST007",
       "eventID": "EXAMPLE123EVENT007",
       "readOnly": false,
@@ -204,7 +241,10 @@
       "awsRegion": "ap-southeast-1",
       "sourceIPAddress": "203.0.113.5",
       "userAgent": "aws-cli/2.9.0",
-      "requestParameters": { "bucketName": "R102", "AccessControlPolicy": {} },
+      "requestParameters": {
+        "bucketName": "R102",
+        "AccessControlPolicy": {}
+      },
       "responseElements": null,
       "requestID": "EXAMPLE123REQUEST008",
       "eventID": "EXAMPLE123EVENT008",
@@ -230,8 +270,16 @@
       "awsRegion": "us-east-1",
       "sourceIPAddress": "203.0.113.5",
       "userAgent": "AWS Internal",
-      "requestParameters": { "userName": "alice" },
-      "responseElements": { "accessKey": { "userName": "alice", "accessKeyId": "AKIAIOSFODNN7EXAMPLE", "status": "Active" } },
+      "requestParameters": {
+        "userName": "alice"
+      },
+      "responseElements": {
+        "accessKey": {
+          "userName": "alice",
+          "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+          "status": "Active"
+        }
+      },
       "requestID": "EXAMPLE123REQUEST009",
       "eventID": "EXAMPLE123EVENT009",
       "readOnly": false,
@@ -257,14 +305,19 @@
       "sourceIPAddress": "198.51.100.7",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Failure" },
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
       "requestID": "EXAMPLE123REQUEST010",
       "eventID": "EXAMPLE123EVENT010",
       "readOnly": false,
       "eventType": "AwsConsoleSignIn",
       "managementEvent": true,
       "recipientAccountId": "123456789012",
-      "additionalEventData": { "LoginTo": "https://console.aws.amazon.com/", "MFAUsed": "No" },
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
       "errorCode": "Failed authentication",
       "errorMessage": "Failed authentication"
     },
@@ -284,14 +337,19 @@
       "sourceIPAddress": "198.51.100.7",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Failure" },
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
       "requestID": "EXAMPLE123REQUEST011",
       "eventID": "EXAMPLE123EVENT011",
       "readOnly": false,
       "eventType": "AwsConsoleSignIn",
       "managementEvent": true,
       "recipientAccountId": "123456789012",
-      "additionalEventData": { "LoginTo": "https://console.aws.amazon.com/", "MFAUsed": "No" },
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
       "errorCode": "Failed authentication",
       "errorMessage": "Failed authentication"
     },
@@ -311,14 +369,19 @@
       "sourceIPAddress": "198.51.100.7",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Failure" },
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
       "requestID": "EXAMPLE123REQUEST012",
       "eventID": "EXAMPLE123EVENT012",
       "readOnly": false,
       "eventType": "AwsConsoleSignIn",
       "managementEvent": true,
       "recipientAccountId": "123456789012",
-      "additionalEventData": { "LoginTo": "https://console.aws.amazon.com/", "MFAUsed": "No" },
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
       "errorCode": "Failed authentication",
       "errorMessage": "Failed authentication"
     },
@@ -338,14 +401,19 @@
       "sourceIPAddress": "198.51.100.7",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Failure" },
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
       "requestID": "EXAMPLE123REQUEST013",
       "eventID": "EXAMPLE123EVENT013",
       "readOnly": false,
       "eventType": "AwsConsoleSignIn",
       "managementEvent": true,
       "recipientAccountId": "123456789012",
-      "additionalEventData": { "LoginTo": "https://console.aws.amazon.com/", "MFAUsed": "No" },
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
       "errorCode": "Failed authentication",
       "errorMessage": "Failed authentication"
     },
@@ -365,14 +433,19 @@
       "sourceIPAddress": "198.51.100.7",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Failure" },
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
       "requestID": "EXAMPLE123REQUEST014",
       "eventID": "EXAMPLE123EVENT014",
       "readOnly": false,
       "eventType": "AwsConsoleSignIn",
       "managementEvent": true,
       "recipientAccountId": "123456789012",
-      "additionalEventData": { "LoginTo": "https://console.aws.amazon.com/", "MFAUsed": "No" },
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
       "errorCode": "Failed authentication",
       "errorMessage": "Failed authentication"
     },
@@ -392,14 +465,19 @@
       "sourceIPAddress": "198.51.100.7",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Failure" },
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
       "requestID": "EXAMPLE123REQUEST015",
       "eventID": "EXAMPLE123EVENT015",
       "readOnly": false,
       "eventType": "AwsConsoleSignIn",
       "managementEvent": true,
       "recipientAccountId": "123456789012",
-      "additionalEventData": { "LoginTo": "https://console.aws.amazon.com/", "MFAUsed": "No" },
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
       "errorCode": "Failed authentication",
       "errorMessage": "Failed authentication"
     },
@@ -419,14 +497,19 @@
       "sourceIPAddress": "185.220.101.1",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Failure" },
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
       "requestID": "EXAMPLE123REQUEST016",
       "eventID": "EXAMPLE123EVENT016",
       "readOnly": false,
       "eventType": "AwsConsoleSignIn",
       "managementEvent": true,
       "recipientAccountId": "123456789012",
-      "additionalEventData": { "LoginTo": "https://console.aws.amazon.com/", "MFAUsed": "No" },
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
       "errorCode": "Failed authentication",
       "errorMessage": null
     },
@@ -446,7 +529,9 @@
       "sourceIPAddress": "45.33.32.156",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Failure" },
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
       "requestID": "EXAMPLE123REQUEST017",
       "eventID": "EXAMPLE123EVENT017",
       "readOnly": false,
@@ -473,7 +558,9 @@
       "sourceIPAddress": "91.108.4.100",
       "userAgent": null,
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Failure" },
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
       "requestID": "EXAMPLE123REQUEST018",
       "eventID": "EXAMPLE123EVENT018",
       "readOnly": false,
@@ -500,14 +587,19 @@
       "sourceIPAddress": "103.21.244.0",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Success" },
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
       "requestID": "EXAMPLE123REQUEST019",
       "eventID": "EXAMPLE123EVENT019",
       "readOnly": false,
       "eventType": "AwsConsoleSignIn",
       "managementEvent": true,
       "recipientAccountId": "123456789012",
-      "additionalEventData": { "LoginTo": "https://console.aws.amazon.com/", "MFAUsed": "No" },
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
       "errorCode": null,
       "errorMessage": null
     },
@@ -527,14 +619,18 @@
       "sourceIPAddress": "198.51.100.22",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Failure" },
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
       "requestID": "EXAMPLE123REQUEST020",
       "eventID": "EXAMPLE123EVENT020",
       "readOnly": false,
       "eventType": "AwsConsoleSignIn",
       "managementEvent": true,
       "recipientAccountId": "123456789012",
-      "additionalEventData": { "MFAUsed": "No" },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
       "errorCode": "Failed authentication",
       "errorMessage": "Failed authentication"
     },
@@ -554,14 +650,18 @@
       "sourceIPAddress": "198.51.100.22",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Failure" },
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
       "requestID": "EXAMPLE123REQUEST021",
       "eventID": "EXAMPLE123EVENT021",
       "readOnly": false,
       "eventType": "AwsConsoleSignIn",
       "managementEvent": true,
       "recipientAccountId": "123456789012",
-      "additionalEventData": { "MFAUsed": "No" },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
       "errorCode": "Failed authentication",
       "errorMessage": "Failed authentication"
     },
@@ -581,14 +681,18 @@
       "sourceIPAddress": "198.51.100.22",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Failure" },
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
       "requestID": "EXAMPLE123REQUEST022",
       "eventID": "EXAMPLE123EVENT022",
       "readOnly": false,
       "eventType": "AwsConsoleSignIn",
       "managementEvent": true,
       "recipientAccountId": "123456789012",
-      "additionalEventData": { "MFAUsed": "No" },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
       "errorCode": "Failed authentication",
       "errorMessage": "Failed authentication"
     },
@@ -608,14 +712,18 @@
       "sourceIPAddress": "198.51.100.22",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Failure" },
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
       "requestID": "EXAMPLE123REQUEST023",
       "eventID": "EXAMPLE123EVENT023",
       "readOnly": false,
       "eventType": "AwsConsoleSignIn",
       "managementEvent": true,
       "recipientAccountId": "123456789012",
-      "additionalEventData": { "MFAUsed": "No" },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
       "errorCode": "Failed authentication",
       "errorMessage": "Failed authentication"
     },
@@ -635,14 +743,18 @@
       "sourceIPAddress": "198.51.100.22",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Failure" },
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
       "requestID": "EXAMPLE123REQUEST024",
       "eventID": "EXAMPLE123EVENT024",
       "readOnly": false,
       "eventType": "AwsConsoleSignIn",
       "managementEvent": true,
       "recipientAccountId": "123456789012",
-      "additionalEventData": { "MFAUsed": "No" },
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
       "errorCode": "Failed authentication",
       "errorMessage": "Failed authentication"
     },
@@ -661,7 +773,15 @@
       "awsRegion": "ap-southeast-1",
       "sourceIPAddress": "203.0.113.5",
       "userAgent": "aws-cli/2.9.0",
-      "requestParameters": { "instancesSet": { "items": [{ "instanceId": "R108" }] } },
+      "requestParameters": {
+        "instancesSet": {
+          "items": [
+            {
+              "instanceId": "R108"
+            }
+          ]
+        }
+      },
       "responseElements": null,
       "requestID": "EXAMPLE123REQUEST025",
       "eventID": "EXAMPLE123EVENT025",
@@ -688,14 +808,655 @@
       "sourceIPAddress": "198.51.100.7",
       "userAgent": "Mozilla/5.0",
       "requestParameters": null,
-      "responseElements": { "ConsoleLogin": "Success" },
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
       "requestID": "EXAMPLE123REQUEST026",
       "eventID": "EXAMPLE123EVENT026",
       "readOnly": false,
       "eventType": "AwsConsoleSignIn",
       "managementEvent": true,
       "recipientAccountId": "123456789012",
-      "additionalEventData": { "LoginTo": "https://console.aws.amazon.com/", "MFAUsed": "No" },
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID007",
+        "arn": "arn:aws:iam::123456789012:user/grace",
+        "accountId": "123456789012",
+        "userName": "grace"
+      },
+      "eventTime": "2024-01-15T07:30:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "192.168.2.20",
+      "userAgent": "Mozilla/5.0",
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "requestID": "EXAMPLE123REQUEST027",
+      "eventID": "EXAMPLE123EVENT027",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "Yes"
+      },
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID007",
+        "arn": "arn:aws:iam::123456789012:user/grace",
+        "accountId": "123456789012",
+        "userName": "grace"
+      },
+      "eventTime": "2024-01-15T07:35:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "192.168.2.20",
+      "userAgent": "aws-sdk-python/1.26.0",
+      "requestParameters": {
+        "bucketName": "R116",
+        "key": "dataset_v2.csv"
+      },
+      "responseElements": null,
+      "requestID": "EXAMPLE123REQUEST028",
+      "eventID": "EXAMPLE123EVENT028",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID007",
+        "arn": "arn:aws:iam::123456789012:user/grace",
+        "accountId": "123456789012",
+        "userName": "grace"
+      },
+      "eventTime": "2024-01-15T08:00:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "PutObject",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "192.168.2.20",
+      "userAgent": "aws-sdk-python/1.26.0",
+      "requestParameters": {
+        "bucketName": "R116",
+        "key": "results_v3.csv"
+      },
+      "responseElements": null,
+      "requestID": "EXAMPLE123REQUEST029",
+      "eventID": "EXAMPLE123EVENT029",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID008",
+        "arn": "arn:aws:iam::123456789012:user/heidi",
+        "accountId": "123456789012",
+        "userName": "heidi"
+      },
+      "eventTime": "2024-01-15T11:00:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.99",
+      "userAgent": "Mozilla/5.0",
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "requestID": "EXAMPLE123REQUEST030",
+      "eventID": "EXAMPLE123EVENT030",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "errorCode": "Failed authentication",
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID008",
+        "arn": "arn:aws:iam::123456789012:user/heidi",
+        "accountId": "123456789012",
+        "userName": "heidi"
+      },
+      "eventTime": "2024-01-15T11:00:18Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.99",
+      "userAgent": "Mozilla/5.0",
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "requestID": "EXAMPLE123REQUEST031",
+      "eventID": "EXAMPLE123EVENT031",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "errorCode": "Failed authentication",
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID008",
+        "arn": "arn:aws:iam::123456789012:user/heidi",
+        "accountId": "123456789012",
+        "userName": "heidi"
+      },
+      "eventTime": "2024-01-15T11:00:35Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.99",
+      "userAgent": "Mozilla/5.0",
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "requestID": "EXAMPLE123REQUEST032",
+      "eventID": "EXAMPLE123EVENT032",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "errorCode": "Failed authentication",
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID008",
+        "arn": "arn:aws:iam::123456789012:user/heidi",
+        "accountId": "123456789012",
+        "userName": "heidi"
+      },
+      "eventTime": "2024-01-15T11:00:52Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.99",
+      "userAgent": "Mozilla/5.0",
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "requestID": "EXAMPLE123REQUEST033",
+      "eventID": "EXAMPLE123EVENT033",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "errorCode": "Failed authentication",
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID008",
+        "arn": "arn:aws:iam::123456789012:user/heidi",
+        "accountId": "123456789012",
+        "userName": "heidi"
+      },
+      "eventTime": "2024-01-15T11:01:10Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.99",
+      "userAgent": "Mozilla/5.0",
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "requestID": "EXAMPLE123REQUEST034",
+      "eventID": "EXAMPLE123EVENT034",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "additionalEventData": null,
+      "errorCode": "Failed authentication",
+      "errorMessage": "Failed authentication"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID009",
+        "arn": "arn:aws:iam::123456789012:user/ivan",
+        "accountId": "123456789012",
+        "userName": "ivan"
+      },
+      "eventTime": "2024-01-15T13:00:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "77.88.55.66",
+      "userAgent": "Mozilla/5.0",
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "requestID": "EXAMPLE123REQUEST035",
+      "eventID": "EXAMPLE123EVENT035",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "additionalEventData": {
+        "MFAUsed": "No"
+      },
+      "errorCode": "Failed authentication",
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID009",
+        "arn": "arn:aws:iam::123456789012:user/ivan",
+        "accountId": "123456789012",
+        "userName": "ivan"
+      },
+      "eventTime": "2024-01-15T13:05:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "31.13.64.35",
+      "userAgent": null,
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      },
+      "requestID": "EXAMPLE123REQUEST036",
+      "eventID": "EXAMPLE123EVENT036",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "additionalEventData": null,
+      "errorCode": "Failed authentication",
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID009",
+        "arn": "arn:aws:iam::123456789012:user/ivan",
+        "accountId": "123456789012",
+        "userName": "ivan"
+      },
+      "eventTime": "2024-01-15T13:12:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "109.169.23.50",
+      "userAgent": "Mozilla/5.0",
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "requestID": "EXAMPLE123REQUEST037",
+      "eventID": "EXAMPLE123EVENT037",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/",
+        "MFAUsed": "No"
+      },
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID001",
+        "arn": "arn:aws:iam::123456789012:user/alice",
+        "accountId": "123456789012",
+        "userName": "alice"
+      },
+      "eventTime": "2024-01-15T14:00:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "PutObject",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "192.168.1.10",
+      "userAgent": "aws-sdk-python/1.26.0",
+      "requestParameters": {
+        "bucketName": "R118",
+        "key": "backup_2024_01_15.tar.gz"
+      },
+      "responseElements": null,
+      "requestID": "EXAMPLE123REQUEST038",
+      "eventID": "EXAMPLE123EVENT038",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID001",
+        "arn": "arn:aws:iam::123456789012:user/alice",
+        "accountId": "123456789012",
+        "userName": "alice"
+      },
+      "eventTime": "2024-01-15T14:30:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "192.168.1.10",
+      "userAgent": "aws-sdk-python/1.26.0",
+      "requestParameters": {
+        "bucketName": "R117",
+        "key": "q4_report.pdf"
+      },
+      "responseElements": null,
+      "requestID": "EXAMPLE123REQUEST039",
+      "eventID": "EXAMPLE123EVENT039",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID002",
+        "arn": "arn:aws:iam::123456789012:user/bob",
+        "accountId": "123456789012",
+        "userName": "bob"
+      },
+      "eventTime": "2024-01-15T15:30:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "10.0.0.5",
+      "userAgent": "S3Console/0.4",
+      "requestParameters": {
+        "bucketName": "R119",
+        "key": "artifact_build_421.zip"
+      },
+      "responseElements": null,
+      "requestID": "EXAMPLE123REQUEST040",
+      "eventID": "EXAMPLE123EVENT040",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID002",
+        "arn": "arn:aws:iam::123456789012:user/bob",
+        "accountId": "123456789012",
+        "userName": "bob"
+      },
+      "eventTime": "2024-01-15T15:45:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "GetRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.0.5",
+      "userAgent": "aws-cli/2.9.0",
+      "requestParameters": {
+        "roleName": "R124"
+      },
+      "responseElements": null,
+      "requestID": "EXAMPLE123REQUEST041",
+      "eventID": "EXAMPLE123EVENT041",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:iam::123456789012:user/bob is not authorized to perform: iam:GetRole"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID004",
+        "arn": "arn:aws:iam::123456789012:user/dave",
+        "accountId": "123456789012",
+        "userName": "dave"
+      },
+      "eventTime": "2024-01-15T16:00:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "DeleteObject",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "172.16.0.3",
+      "userAgent": "aws-cli/2.9.0",
+      "requestParameters": {
+        "bucketName": "R116",
+        "key": "dataset_v1.csv"
+      },
+      "responseElements": null,
+      "requestID": "EXAMPLE123REQUEST042",
+      "eventID": "EXAMPLE123EVENT042",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": false,
+      "recipientAccountId": "123456789012",
+      "errorCode": "AccessDenied",
+      "errorMessage": "Access Denied"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID003",
+        "arn": "arn:aws:iam::123456789012:user/admin",
+        "accountId": "123456789012",
+        "userName": "admin"
+      },
+      "eventTime": "2024-01-15T18:00:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "DetachRolePolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.5",
+      "userAgent": "AWS Internal",
+      "requestParameters": {
+        "roleName": "R126",
+        "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+      },
+      "responseElements": null,
+      "requestID": "EXAMPLE123REQUEST043",
+      "eventID": "EXAMPLE123EVENT043",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID003",
+        "arn": "arn:aws:iam::123456789012:user/admin",
+        "accountId": "123456789012",
+        "userName": "admin"
+      },
+      "eventTime": "2024-01-15T18:02:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "RunInstances",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "203.0.113.5",
+      "userAgent": "aws-cli/2.9.0",
+      "requestParameters": {
+        "instanceType": "t2.micro",
+        "minCount": 1,
+        "maxCount": 1
+      },
+      "responseElements": {
+        "instancesSet": {
+          "items": [
+            {
+              "instanceId": "R123"
+            }
+          ]
+        }
+      },
+      "requestID": "EXAMPLE123REQUEST044",
+      "eventID": "EXAMPLE123EVENT044",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID003",
+        "arn": "arn:aws:iam::123456789012:user/admin",
+        "accountId": "123456789012",
+        "userName": "admin"
+      },
+      "eventTime": "2024-01-15T18:04:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "PutBucketPolicy",
+      "awsRegion": "ap-southeast-1",
+      "sourceIPAddress": "203.0.113.5",
+      "userAgent": "aws-cli/2.9.0",
+      "requestParameters": {
+        "bucketName": "R117"
+      },
+      "responseElements": null,
+      "requestID": "EXAMPLE123REQUEST045",
+      "eventID": "EXAMPLE123EVENT045",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID003",
+        "arn": "arn:aws:iam::123456789012:user/admin",
+        "accountId": "123456789012",
+        "userName": "admin"
+      },
+      "eventTime": "2024-01-15T18:06:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.5",
+      "userAgent": "AWS Internal",
+      "requestParameters": {
+        "roleName": "temp-migration-role"
+      },
+      "responseElements": {
+        "role": {
+          "roleName": "temp-migration-role",
+          "roleId": "AROATEMPID001"
+        }
+      },
+      "requestID": "EXAMPLE123REQUEST046",
+      "eventID": "EXAMPLE123EVENT046",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "errorCode": null,
+      "errorMessage": null
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLEID003",
+        "arn": "arn:aws:iam::123456789012:user/admin",
+        "accountId": "123456789012",
+        "userName": "admin"
+      },
+      "eventTime": "2024-01-15T18:08:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "AttachRolePolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.5",
+      "userAgent": "AWS Internal",
+      "requestParameters": {
+        "roleName": "temp-migration-role",
+        "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+      },
+      "responseElements": null,
+      "requestID": "EXAMPLE123REQUEST047",
+      "eventID": "EXAMPLE123EVENT047",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
       "errorCode": null,
       "errorMessage": null
     }

@@ -32,7 +32,7 @@ CLOUDTRAIL_JSON  = "../data/raw_cloudtrail.json"
 RESOURCES_JSON   = "../data/raw_resources.json"
 PARSED_LOGS      = "../data/parsed_access_logs.csv"
 PARSED_RESOURCES = "../data/parsed_resources.csv"
-JSON_REPORT_OUT  = "../output/report_phase2.json"
+JSON_REPORT_OUT  = "../output/report.json"
 
 
 # ---------------------------------------------------------------------------
