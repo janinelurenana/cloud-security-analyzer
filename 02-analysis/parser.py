@@ -19,10 +19,10 @@ Usage (standalone):
 Usage (imported):
     from parser import parse_all
     parse_all(
-        cloudtrail_path="data/raw_cloudtrail.json",
-        resources_path="data/raw_resources.json",
-        logs_out="data/parsed_access_logs.csv",
-        resources_out="data/parsed_resources.csv",
+        cloudtrail_path="01-data/raw_cloudtrail.json",
+        resources_path="01-data/raw_resources.json",
+        logs_out="01-data/parsed_access_logs.csv",
+        resources_out="01-data/parsed_resources.csv",
     )
 """
 
@@ -282,10 +282,10 @@ def _write_csv(rows: list[dict], fields: list[str], path: str) -> None:
 # ---------------------------------------------------------------------------
 
 def parse_all(
-    cloudtrail_path: str = "data/raw_cloudtrail.json",
-    resources_path:  str = "data/raw_resources.json",
-    logs_out:        str = "data/parsed_access_logs.csv",
-    resources_out:   str = "data/parsed_resources.csv",
+    cloudtrail_path: str = "01-data/raw_cloudtrail.json",
+    resources_path:  str = "01-data/raw_resources.json",
+    logs_out:        str = "01-data/parsed_access_logs.csv",
+    resources_out:   str = "01-data/parsed_resources.csv",
 ) -> tuple[str, str]:
     """
     Parse both raw JSON files and write normalized CSVs.

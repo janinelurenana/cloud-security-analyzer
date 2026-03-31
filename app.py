@@ -20,7 +20,7 @@ from pathlib import Path
 # Config
 # ---------------------------------------------------------------------------
 
-REPORT_PATH = Path("output/report.json")
+REPORT_PATH = Path("03-output/report.json")
 
 SEVERITY_COLORS = {
     "HIGH":   "#e63946",

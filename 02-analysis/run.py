@@ -1,7 +1,7 @@
 """
-run_phase2.py
+run.py
 -------------
-Phase 2 entry point.
+Entry point.
 
 Pipeline:
     raw_cloudtrail.json  ──┐
@@ -28,11 +28,11 @@ from report import generate_report
 # Paths
 # ---------------------------------------------------------------------------
 
-CLOUDTRAIL_JSON  = "../data/raw_cloudtrail.json"
-RESOURCES_JSON   = "../data/raw_resources.json"
-PARSED_LOGS      = "../data/parsed_access_logs.csv"
-PARSED_RESOURCES = "../data/parsed_resources.csv"
-JSON_REPORT_OUT  = "../output/report.json"
+CLOUDTRAIL_JSON  = "01-data/raw_cloudtrail.json"
+RESOURCES_JSON   = "01-data/raw_resources.json"
+PARSED_LOGS      = "01-data/parsed_access_logs.csv"
+PARSED_RESOURCES = "01-data/parsed_resources.csv"
+JSON_REPORT_OUT  = "03-output/report.json"
 
 
 # ---------------------------------------------------------------------------
