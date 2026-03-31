@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-31T17:28:46.888949+00:00",
+  "generated_at": "2026-03-31T17:35:34.703220+00:00",
   "summary": {
     "total": 43,
     "HIGH": 14,
@@ -64,8 +64,8 @@
     {
       "severity": "HIGH",
       "rule": "Brute Force Attempt",
-      "resource_id": "user:frank",
-      "reason": "User 'frank' had 5 failed login attempts, with 5+ failures within a 5-minute window. Possible brute-force attack."
+      "resource_id": "user:charlie",
+      "reason": "User 'charlie' had 6 failed login attempts, with 5+ failures within a 5-minute window. Possible brute-force attack."
     },
     {
       "severity": "HIGH",
@@ -76,8 +76,8 @@
     {
       "severity": "HIGH",
       "rule": "Brute Force Attempt",
-      "resource_id": "user:charlie",
-      "reason": "User 'charlie' had 6 failed login attempts, with 5+ failures within a 5-minute window. Possible brute-force attack."
+      "resource_id": "user:frank",
+      "reason": "User 'frank' had 5 failed login attempts, with 5+ failures within a 5-minute window. Possible brute-force attack."
     },
     {
       "severity": "HIGH",
