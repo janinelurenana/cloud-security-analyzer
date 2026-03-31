@@ -103,7 +103,7 @@ def parse_cloudtrail(path: str) -> list[dict]:
     Logs a warning for each skipped record.
     """
     with open(path) as f:
-        data = json.load(f)
+        data = json.load(f)  # turns access_logs into a python dictionary named 'data'
 
     records = data.get("Records", [])
     rows = []

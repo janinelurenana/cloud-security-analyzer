@@ -2,7 +2,7 @@
 detect.py
 ---------
 Detection engine for cloud security misconfigurations and suspicious activity.
-Reads resources.csv and access_logs.csv, applies rules, returns a list of findings.
+Reads parsed_resources.csv and parsed_acxtcess_logs.csv, applies rules, returns a list of findings.
 
 Each finding is a dict:
 {
