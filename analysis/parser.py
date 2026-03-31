@@ -143,7 +143,7 @@ def parse_cloudtrail(path: str) -> list[dict]:
 # Resource JSON → resources
 # ---------------------------------------------------------------------------
 
-RESOURCES_FIELDS = ["resource_id", "resource_type", "public_access", "port_open", "iam_role", "encryption"]
+RESOURCES_FIELDS = ["resource_id", "resource_type", "public_access", "port_open", "iam_role", "encryption", "monitoring_enabled"]
 
 # IAM policy ARNs that map to admin-level access
 ADMIN_POLICY_ARNS = {
@@ -183,12 +183,13 @@ def _parse_s3_buckets(buckets: list) -> list[dict]:
         encrypted = sse is not None and bool(_safe_get(sse, "Rules"))
 
         rows.append({
-            "resource_id":   bucket.get("BucketId", "unknown"),
-            "resource_type": "S3",
-            "public_access": is_public,
-            "port_open":     None,
-            "iam_role":      "read-only",   # buckets don't have instance profiles
-            "encryption":    encrypted,
+            "resource_id":       bucket.get("BucketId", "unknown"),
+            "resource_type":     "S3",
+            "public_access":     is_public,
+            "port_open":         None,
+            "iam_role":          "read-only",   # buckets don't have instance profiles
+            "encryption":        encrypted,
+            "monitoring_enabled": None,
         })
     return rows
 
@@ -223,13 +224,17 @@ def _parse_ec2_instances(instances: list) -> list[dict]:
         else:
             iam_role = "user"
 
+        monitoring = _safe_get(inst, "Monitoring", "State", default="")
+        monitoring_enabled = str(monitoring).lower() == "enabled"
+
         rows.append({
-            "resource_id":   inst.get("InstanceId", "unknown"),
-            "resource_type": "EC2",
-            "public_access": is_public,
-            "port_open":     port_open,
-            "iam_role":      iam_role,
-            "encryption":    encrypted,
+            "resource_id":       inst.get("InstanceId", "unknown"),
+            "resource_type":     "EC2",
+            "public_access":     is_public,
+            "port_open":         port_open,
+            "iam_role":          iam_role,
+            "encryption":        encrypted,
+            "monitoring_enabled": monitoring_enabled,
         })
     return rows
 
@@ -239,12 +244,13 @@ def _parse_iam_roles(roles: list) -> list[dict]:
     for role in roles:
         policies = role.get("AttachedPolicies") or role.get("InlinePolicies") or []
         rows.append({
-            "resource_id":   role.get("RoleId", "unknown"),
-            "resource_type": "IAM",
-            "public_access": False,
-            "port_open":     None,
-            "iam_role":      _classify_iam_role(policies),
-            "encryption":    True,   # IAM roles don't store data — mark as N/A (true)
+            "resource_id":       role.get("RoleId", "unknown"),
+            "resource_type":     "IAM",
+            "public_access":     False,
+            "port_open":         None,
+            "iam_role":          _classify_iam_role(policies),
+            "encryption":        True,   # IAM roles don't store data — mark as N/A (true)
+            "monitoring_enabled": None,
         })
     return rows
 

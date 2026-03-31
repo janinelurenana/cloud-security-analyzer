@@ -14,7 +14,7 @@ Each finding is a dict:
 
 Usage:
     from detect import run_all_rules
-    findings = run_all_rules("data/resources.csv", "data/access_logs.csv")
+    findings = run_all_rules("data/parsed_resources.csv", "data/parsed_access_logs.csv")
 """
 
 import pandas as pd
@@ -43,6 +43,12 @@ def load_resources(path: str) -> pd.DataFrame:
     df["encryption"] = df["encryption"].astype(str).str.lower().map(
         {"true": True, "false": False}
     )
+    if "monitoring_enabled" in df.columns:
+        df["monitoring_enabled"] = df["monitoring_enabled"].astype(str).str.lower().map(
+            {"true": True, "false": False}
+        )
+    else:
+        df["monitoring_enabled"] = None
     return df
 
 
@@ -232,6 +238,32 @@ def rule_admin_overuse(logs: pd.DataFrame) -> list[dict]:
     return findings
 
 
+def rule_monitoring_disabled(resources: pd.DataFrame) -> list[dict]:
+    """
+    Rule 8: EC2 instance monitoring disabled.
+    CloudWatch detailed monitoring being off means reduced visibility into
+    CPU, network, and disk metrics — blind spots during an incident.
+    Severity: LOW — not directly exploitable, but a hygiene issue that
+    hampers detection and incident response.
+    """
+    findings = []
+    flagged = resources[
+        (resources["resource_type"] == "EC2") &
+        (resources["monitoring_enabled"] == False)
+    ]
+    for _, row in flagged.iterrows():
+        findings.append({
+            "severity":    "LOW",
+            "rule":        "Monitoring Disabled",
+            "resource_id": row["resource_id"],
+            "reason":      (
+                f"EC2 instance {row['resource_id']} has CloudWatch detailed monitoring disabled. "
+                "Reduced metric visibility hampers incident detection and response."
+            ),
+        })
+    return findings
+
+
 # ---------------------------------------------------------------------------
 # Main runner
 # ---------------------------------------------------------------------------
@@ -251,6 +283,7 @@ def run_all_rules(resources_path: str, logs_path: str) -> list[dict]:
     findings += rule_brute_force(logs)
     findings += rule_suspicious_ip(logs)
     findings += rule_admin_overuse(logs)
+    findings += rule_monitoring_disabled(resources)
 
     return findings
 
