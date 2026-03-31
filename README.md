@@ -185,6 +185,7 @@ The engine evaluates two categories of risk:
 | 5 | Brute Force Attempt     | HIGH     |
 | 6 | Suspicious IP Behaviour | HIGH     |
 | 7 | Admin Overuse           | MEDIUM   |
+| 8 | Monitoring Disabled     | LOW      |
 
 Thresholds for behavioral rules are configurable in `detect.py`.
 
@@ -227,15 +228,26 @@ Service-generated events introduce noise and reduce signal quality for behaviora
 ## Sample Output
 
 ```
-[detect] 18 finding(s) returned.
+[detect] 43 finding(s) returned.
 
 SUMMARY
 ────────────────────────────
-Total findings : 18
-HIGH           : 8
-MEDIUM         : 10
-LOW            : 0
+Total findings : 43
+HIGH           : 14
+MEDIUM         : 21
+LOW            : 8
 ```
+---
+
+## Input Data
+
+| Source | Records |
+| ------ | ------- |
+| CloudTrail log events | 47 |
+| S3 buckets | 9 |
+| EC2 instances | 10 |
+| IAM roles | 7 |
+| **Total resources** | **26** |
 
 ---
 
