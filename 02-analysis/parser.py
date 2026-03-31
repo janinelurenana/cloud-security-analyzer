@@ -1,11 +1,9 @@
 """
 parser.py
 ---------
-Phase 2 parser/cleaner layer.
 
 Reads raw, messy AWS-like JSON files and normalizes them into the same
-CSV format that detect.py already expects. detect.py never changes —
-only this input layer does.
+CSV format that detect.py already expects. 
 
 Input:
     data/raw_cloudtrail.json    — CloudTrail-format activity logs
