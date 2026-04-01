@@ -173,7 +173,7 @@ def rule_brute_force(logs: pd.DataFrame) -> list[dict]:
     within a BRUTE_FORCE_WINDOW_MIN-minute rolling window.
     """
     findings = []
-    failed = logs[logs["status"] == "fail"].copy()
+    failed = logs[logs["status"] == "fail"].copy()  # creates a df of all failed attempts
     failed = failed.sort_values("timestamp")
     window = timedelta(minutes=BRUTE_FORCE_WINDOW_MIN)
 
@@ -182,7 +182,7 @@ def rule_brute_force(logs: pd.DataFrame) -> list[dict]:
         times = group["timestamp"].tolist()
         # Sliding window count
         for i, start in enumerate(times):
-            count = sum(1 for t in times[i:] if t - start <= window)
+            count = sum(1 for time in times[i:] if time - start <= window)
             if count >= BRUTE_FORCE_THRESHOLD:
                 flagged_users.add(user)
                 break
@@ -218,8 +218,8 @@ def rule_suspicious_ip(logs: pd.DataFrame) -> list[dict]:
         ips   = group["ip_address"].tolist()
         for i, start in enumerate(times):
             window_entries = [
-                (t, ip) for t, ip in zip(times[i:], ips[i:])
-                if t - start <= window
+                (time, ip) for time, ip in zip(times[i:], ips[i:])
+                if time - start <= window
             ]
             distinct_ips = set(ip for _, ip in window_entries)
             if len(distinct_ips) >= MULTI_IP_THRESHOLD:
@@ -256,7 +256,7 @@ def rule_admin_overuse(logs: pd.DataFrame) -> list[dict]:
                 "rule":        "Admin Overuse",
                 "resource_id": "user:admin",
                 "reason":      (
-                    f"Admin account performed {len(group)} actions on {date}. "
+                    f"Admin account performed {len(group)} actsion on {date}. "
                     f"High admin activity may indicate privilege misuse or a compromised account."
                 ),
             })
