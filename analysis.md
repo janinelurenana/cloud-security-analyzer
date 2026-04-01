@@ -23,7 +23,7 @@ The audit ingested raw CloudTrail JSON and AWS Describe API output, normalized i
 
 ## Summary Dashboard
 
-![dashboard summary cards](./dashboard/summary_cards.png)
+![dashboard summary cards](./04-dashboard/summary_cards.png)
 
 ---
 
@@ -126,7 +126,7 @@ Eight EC2 instances have CloudWatch detailed monitoring disabled: `R106`, `R108`
 
 ## Findings Breakdown Charts
 
-![screenshot of the two bar charts (severity breakdown on the left, findings by rule on the right)](./dashboard/charts_breakdown.png)
+![screenshot of the two bar charts (severity breakdown on the left, findings by rule on the right)](./04-dashboard/charts_breakdown.png)
 
 
 ---
@@ -182,7 +182,7 @@ CI/CD pipelines with admin credentials represent a supply chain risk that is har
 
 ## Findings Table - Filtered to high severity
 
-![Findings table filtered to HIGH severity only.](./dashboard/findings_high_only.png)
+![Findings table filtered to HIGH severity only.](./04-dashboard/findings_high_only.png)
 
 ---
 
