@@ -107,6 +107,7 @@ cloud-security-analyzer/
 │
 ├── app.py
 ├── analysis.md
+├── requirements.txt
 └── README.md
 ```
 
