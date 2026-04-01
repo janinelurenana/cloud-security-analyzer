@@ -10,7 +10,7 @@ Usage (standalone):
 
 Usage (imported):
     from report import generate_report
-    generate_report(findings, json_output_path="output/report.json")
+    generate_report(findings, json_output_path="03-output/report.json")
 """
 
 import json
@@ -31,7 +31,7 @@ SEVERITY_LABEL = {
     "LOW":    "🔵 LOW   ",
 }
 
-# Real-world explanations for Phase 4 of your project plan
+# Real-world explanations
 RULE_EXPLANATIONS = {
     "Public Storage": {
         "why_dangerous": "Anyone on the internet can read, download, or overwrite the bucket's contents — including sensitive files, credentials, or backups.",
@@ -175,7 +175,7 @@ def write_json_report(findings: list[dict], path: str) -> None:
 
 def generate_report(
     findings: list[dict],
-    json_output_path: str = "output/report.json",
+    json_output_path: str = "03-output/report.json",
 ) -> None:
     """Print console report and write JSON file."""
     print_report(findings)
