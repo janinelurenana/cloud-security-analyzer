@@ -256,7 +256,7 @@ def rule_admin_overuse(logs: pd.DataFrame) -> list[dict]:
                 "rule":        "Admin Overuse",
                 "resource_id": "user:admin",
                 "reason":      (
-                    f"Admin account performed {len(group)} actsion on {date}. "
+                    f"Admin account performed {len(group)} action on {date}. "
                     f"High admin activity may indicate privilege misuse or a compromised account."
                 ),
             })
